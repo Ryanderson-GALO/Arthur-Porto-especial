@@ -11,13 +11,51 @@
   </head>
   <body>
 
+    <!-- ░░ MÚSICA — clique em qualquer lugar da página para tocar ░░ -->
     <iframe
+      id="yt-music"
       class="yt-music"
-      src="https://www.youtube.com/embed/vLBqCDGjcLg?autoplay=1&loop=1&playlist=vLBqCDGjcLg&mute=0&controls=0&modestbranding=1"
+      src="about:blank"
+      data-src="https://www.youtube.com/embed/P52crWWUnOw?autoplay=1&loop=1&playlist=P52crWWUnOw&controls=0&modestbranding=1"
       allow="autoplay; encrypted-media"
-      allowfullscreen
       title="Música de aniversário"
     ></iframe>
+
+    <!-- Overlay invisível que captura o primeiro clique e liga a música -->
+    <div id="play-overlay" style="
+      position:fixed; inset:0; z-index:9999; cursor:pointer;
+    " onclick="
+      var f = document.getElementById('yt-music');
+      f.src = f.dataset.src;
+      this.remove();
+    "></div>
+
+    <!-- Dica visual para o usuário clicar -->
+    <div id="play-hint" style="
+      position:fixed; bottom:2rem; left:50%; transform:translateX(-50%);
+      z-index:10000; background:rgba(255,110,180,0.85); color:#fff;
+      font-family:'Nunito',sans-serif; font-weight:700; font-size:1rem;
+      padding:0.7rem 1.6rem; border-radius:50px;
+      box-shadow:0 0 20px rgba(255,110,180,0.6);
+      animation: pisca 1.2s ease-in-out infinite alternate;
+      pointer-events:none;
+    ">
+      🎵 Clique em qualquer lugar para tocar a música!
+    </div>
+
+    <style>
+      @keyframes pisca {
+        from { opacity: 0.6; transform: translateX(-50%) scale(0.97); }
+        to   { opacity: 1;   transform: translateX(-50%) scale(1.03); }
+      }
+    </style>
+
+    <script>
+      // Remove a dica assim que o usuário clicar
+      document.getElementById('play-overlay').addEventListener('click', function() {
+        document.getElementById('play-hint').remove();
+      }, { once: true });
+    </script>
 
     <!-- ░░ CONFETES CSS ░░ -->
     <div class="confetti-wrap" aria-hidden="true">
@@ -48,7 +86,6 @@
     <!-- ░░ PÁGINA ░░ -->
     <div class="page">
 
-      <!-- Estrelinhas decorativas -->
       <span class="star s1">✦</span>
       <span class="star s2">✶</span>
       <span class="star s3">✦</span>
@@ -95,7 +132,7 @@
         <p>🎂 Que venham muitos mais! 🎂</p>
       </footer>
 
-    </div><!-- /page -->
+    </div>
 
   </body>
 </html>
