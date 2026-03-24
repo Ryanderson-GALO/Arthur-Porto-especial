@@ -1,14 +1,15 @@
 
 .yt-music {
   position: fixed;
-  width: 1px;
-  height: 1px;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  pointer-events: none;
+  bottom: 1rem;
+  right: 1rem;
+  width: 180px;
+  height: 40px;
   border: none;
-  z-index: -1;
+  border-radius: 8px;
+  z-index: 1000;
+  opacity: 0.85;
+  box-shadow: 0 0 12px rgba(255,110,180,0.5);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
