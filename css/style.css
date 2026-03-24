@@ -1,4 +1,3 @@
-/* ── OVERLAY DE CLIQUE ── */
 #overlay {
   position: fixed;
   inset: 0;
@@ -28,7 +27,6 @@
   to   { opacity: 1;   transform: scale(1.04); }
 }
 
-/* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -63,7 +61,6 @@ body {
   cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='26' font-size='26'>🎈</text></svg>") 16 28, auto;
 }
 
-/* ── CONFETES ── */
 .confetti-wrap {
   position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
@@ -114,7 +111,6 @@ body {
   100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
 }
 
-/* ── CHUVA DE IMAGEM ── */
 .rain {
   position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
@@ -155,7 +151,6 @@ body {
   100% { transform: translateY(110vh) rotate(20deg)  scale(1.1); opacity: 0; }
 }
 
-/* ── ESTRELINHAS ── */
 .star {
   position: fixed;
   font-size: 1.4rem;
@@ -179,7 +174,6 @@ body {
   to   { transform: translateY(-16px) rotate(20deg); }
 }
 
-/* ── PÁGINA ── */
 .page {
   position: relative;
   z-index: 10;
@@ -191,7 +185,6 @@ body {
   gap: 2.5rem;
 }
 
-/* ── HERO ── */
 .hero {
   text-align: center;
   position: relative;
@@ -229,7 +222,6 @@ body {
   background-clip: text;
 }
 
-/* ── BOLO ── */
 .cake-wrap {
   position: relative;
   display: inline-block;
@@ -263,7 +255,6 @@ body {
   to   { opacity: 1;   transform: scale(1.05); }
 }
 
-/* ── MENSAGEM ── */
 .mensagem-wrap {
   max-width: 560px;
   width: 100%;
@@ -315,7 +306,6 @@ body {
   font-size: 1rem;
 }
 
-/* ── RODAPÉ ── */
 .rodape {
   margin-top: auto;
   font-family: 'Pacifico', cursive;
@@ -329,13 +319,11 @@ body {
   to   { text-shadow: 0 0 35px rgba(255,224,102,1), 0 0 60px rgba(255,110,180,0.4); }
 }
 
-/* ── ANIMAÇÃO GERAL ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── RESPONSIVO ── */
 @media (max-width: 480px) {
   .page { padding: 2rem 1rem 3rem; }
   .mensagem { padding: 1.5rem 1.4rem; }
