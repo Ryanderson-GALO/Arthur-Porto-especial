@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎂 Arthur Porto — Feliz Aniversário!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- ░░ MÚSICA ░░ -->
+    <audio id="musica" loop>
+      <source src="xuxa.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Overlay: clique em qualquer lugar toca a música e some -->
+    <div id="overlay" onclick="
+      document.getElementById('musica').play();
+      document.getElementById('overlay').style.display='none';
+    ">
+      <div id="hint">🎵 Clique em qualquer lugar para começar!</div>
+    </div>
+
+    <!-- ░░ CONFETES CSS ░░ -->
+    <div class="confetti-wrap" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <!-- ░░ CHUVA DE IMAGEM ░░ -->
+    <div class="rain" aria-hidden="true">
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+      <img src="img/bolo.png" alt="" />
+    </div>
+
+    <!-- ░░ PÁGINA ░░ -->
+    <div class="page">
+
+      <span class="star s1">✦</span>
+      <span class="star s2">✶</span>
+      <span class="star s3">✦</span>
+      <span class="star s4">✶</span>
+      <span class="star s5">✦</span>
+      <span class="star s6">✶</span>
+
+      <header class="hero">
+        <p class="eyebrow">🎉 IFNMG Campus Salinas · Turma de Informática 🎉</p>
+
+        <h1 class="titulo">
+          Feliz<br />
+          <em>Aniversário</em><br />
+          Arthur!
+        </h1>
+
+        <div class="cake-wrap">
+          <img
+            src="img/bolo.png"
+            alt="Bolo de aniversário com o aniversariante"
+            class="cake"
+          />
+          <div class="cake-glow"></div>
+        </div>
+      </header>
+
+      <main class="mensagem-wrap">
+        <blockquote class="mensagem">
+          <p>
+            Feliz aniversário, Arthur! 🏀🏀🏀<br />
+            Você, depois de Caio, é o professor<br />
+            mais legal dessa instituição.<br />
+            <span class="detalhe">Sem querer puxar saco, claro.</span>
+          </p>
+        </blockquote>
+
+        <p class="assinado">
+          — Assinado com carinho por<br />
+          <strong>Ryanderson Henzyo Souza e Moura</strong>
+        </p>
+      </main>
+
+      <footer class="rodape">
+        <p>🎂 Que venham muitos mais! 🎂</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
